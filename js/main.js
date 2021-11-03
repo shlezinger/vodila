@@ -193,13 +193,9 @@ $(document).ready(function(){
                 new google.maps.Point( 9, 0 )
             )
         };
-        var markerList = [{lat: 42.262651,lng: -71.828033},
-            {lat:42.273543,lng: -71.817843},
-            {lat: 42.267627, lng: -71.810578},
-            {lat: 42.271398,lng: -71.802753},
-            {lat: 42.269234, lng:-71.810193},
-            {lat: 42.263405, lng:-71.816964},
-            {lat:42.272021, lng:-71.812448}];
+        var markerList = [
+			{lat: 50.4629345,lng: 30.5188165},
+            {lat: 50.4629245,lng: 30.5188185}];
         $('#searchingModal').modal('show');
         setTimeout(function(){
             for(var i=0;i<markerList.length;i++){
@@ -581,7 +577,7 @@ function multipleRoute(directionsService, directionsDisplay){
         location:"157 Highland Street, Worcester, MA",
         stopover:true
     }];
-    var coordinates = [{lat:42.270857,lng: -71.809520}];
+    var coordinates = [{lat: 50.4629345,lng: 30.5188165}];
     var icons = {
         end: new google.maps.MarkerImage(
             // URL
@@ -620,7 +616,7 @@ function multipleRoute(directionsService, directionsDisplay){
             window.alert('Directions request failed due to ' + status);
         }
     });
-    makeMarker({lat:42.251450, lng:-71.819469}, icons.end, "Route End");
+    makeMarker({lat: 50.4629345,lng: 30.5188165}, icons.end, "Route End");
     for(var i=0;i<coordinates.length;i++){
         makeMarker(coordinates[i], icons.marker,"Route Stop");
     }
@@ -691,7 +687,7 @@ var directionsDisplay;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         mapTypeControl: false,
-        center: {lat: 42.1945, lng: -71.8356},
+        center: {lat: 50.4629,lng: 30.5188},
         zoom: 13,
         fullscreenControl: false,
     });
@@ -722,7 +718,7 @@ function showMapRequestPin(){
             new google.maps.Size(36, 28)
         )
     };
-    makeMarker( {lat:42.274006, lng:-71.810181}, icons.request, "Request Pin", false);
+    makeMarker( {lat: 50.462934,lng: 30.518816}, icons.request, "Request Pin", false);
     setTimeout(function() {
         if (!$("img[src='../icons/car-start-position.svg']").parent().hasClass('pulse')) {
             $("img[src='../icons/car-start-position.svg']").parent().addClass('pulse').css('opacity',1);
