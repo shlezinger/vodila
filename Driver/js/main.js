@@ -690,7 +690,90 @@ function initMap() {
         center: {lat: 50.4629,lng: 30.5188},
         zoom: 13,
         fullscreenControl: false,
+		styles: [
+        { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+        { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+        { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+        /*
+		{
+          featureType: "administrative.locality",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#d59563" }],
+        },*/
+        {
+          featureType: "poi",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#d59563" }],
+        },
+        {
+          featureType: "poi.park",
+          elementType: "geometry",
+          stylers: [{ color: "#263c3f" }],
+        },
+        {
+          featureType: "poi.park",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#6b9a76" }],
+        },
+        {
+          featureType: "road",
+          elementType: "geometry",
+          stylers: [{ color: "#38414e" }],
+        },
+        {
+          featureType: "road",
+          elementType: "geometry.stroke",
+          stylers: [{ color: "#212a37" }],
+        },
+        {
+          featureType: "road",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#9ca5b3" }],
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry",
+          stylers: [{ color: "#746855" }],
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry.stroke",
+          stylers: [{ color: "#1f2835" }],
+        },
+        {
+          featureType: "road.highway",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#f3d19c" }],
+        },
+        {
+          featureType: "transit",
+          elementType: "geometry",
+          stylers: [{ color: "#2f3948" }],
+        },
+        {
+          featureType: "transit.station",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#d59563" }],
+        },
+        {
+          featureType: "water",
+          elementType: "geometry",
+          stylers: [{ color: "#17263c" }],
+        },
+        {
+          featureType: "water",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#515c6d" }],
+        },
+        {
+          featureType: "water",
+          elementType: "labels.text.stroke",
+          stylers: [{ color: "#17263c" }],
+        },
+      ],
     });
+	
+	
     directionsDisplay = new google.maps.DirectionsRenderer();
     new AutocompleteDirectionsHandler(map);
     $(window).on('resize', function(){
@@ -806,8 +889,8 @@ AutocompleteDirectionsHandler.prototype.route = function() {
     $('.request-ride-btn').removeClass('hidden');
     this.directionsService.route(
         {
-            origin: "157 Highland Street, Worcester MA",
-            destination: "919 Main Street, Worcester MA",
+            origin: "улица Ярославов Вал, Киев, Украина",
+            destination: "улица Пожарского, Киев, Украина",
             travelMode: this.travelMode
         },
         function(response, status) {
@@ -815,7 +898,7 @@ AutocompleteDirectionsHandler.prototype.route = function() {
                 var icons = {
                     start: new google.maps.MarkerImage(
                         // URL
-                        '../icons/circle.svg',
+                        'icons/circle.svg',
                         // (width,height)
                         new google.maps.Size( 26, 21),
                         // The origin point (x,y)
@@ -826,7 +909,7 @@ AutocompleteDirectionsHandler.prototype.route = function() {
                     ),
                     end: new google.maps.MarkerImage(
                         // URL
-                        '../images/end.png',
+                        'images/end.png',
                         // (width,height)
                         new google.maps.Size( 58, 53 ),
                         // The origin point (x,y)
@@ -847,7 +930,7 @@ AutocompleteDirectionsHandler.prototype.route = function() {
                 makeMarker( leg.start_location, icons.start, "Route Start" );
                 makeMarker( leg.end_location, icons.end, 'Route End' );
                 setTimeout(function() {
-                    var currents = $("#map img[src='../icons/circle.svg']").parent();
+                    var currents = $("#map img[src='icons/circle.svg']").parent();
                     currents.each(function(index, current) {
                         if (!$(current).hasClass('pulse current-location') && !$(current).hasClass('map-input-icon')) {
                             $(current).addClass('pulse current-location').css('opacity', 1);
