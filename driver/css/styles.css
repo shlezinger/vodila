@@ -2286,7 +2286,7 @@ a[href^="https://maps.google.com/maps"] {
   bottom: 25px;
   padding: 0 16px;
 }
-.request-ride-btn button,
+.request-ride-btn a,
 .go-to-pickup-btn button {
   width: 100%;
   color: black;
