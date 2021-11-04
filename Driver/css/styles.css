@@ -2135,7 +2135,7 @@ input:checked + .slider:before {
 #origin-input,
 #destination-input {
   background-color: #fff;
-  font-family: 'Roboto Condensed';
+  font-family: 'Calibri', 'Roboto Condensed';
   font-size: 15px;
   font-weight: 300;
   text-overflow: ellipsis;
