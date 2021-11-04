@@ -693,7 +693,7 @@ function initMap() {
 		styles: [
         {
       elementType: "geometry",
-      stylers: [{ color: "#f5f5f5" }],
+      stylers: [{ color: "#e3e3e3" }],
     },
     {
       elementType: "labels.icon",
@@ -725,7 +725,7 @@ function initMap() {
     {
       featureType: "poi.park",
       elementType: "geometry",
-      stylers: [{ color: "#e5e5e5" }],
+      stylers: [{ color: "#e5e5e5" /*"#e5e5e5"*/ }],
     },
     {
       featureType: "poi.park",
