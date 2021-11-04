@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/fontawesome.css">
     <!-- Main Style -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>Profile</title>
+    <title>Анкета</title>
 </head>
 <body>
 
@@ -27,12 +27,12 @@
 
         <!--Page Title & Icons Start-->
         <div class="header-icons-container text-center">
-            <a href="index.html">
+            <a href="main.html">
                 <span class="float-left">
                     <img src="icons/back.svg" alt="Back Icon">
                 </span>
             </a>
-            <span>Profile</span>
+            <!--<span>Profile</span>-->
             <a href="#">
                 <span class="float-right menu-open closed">
                     <img src="icons/menu.svg" alt="Menu Hamburger Icon">
@@ -52,15 +52,16 @@
                     </span>
                 </div>
                 <div class="display-flex flex-column">
-                    <span class="profile-name">Jonathan McBerly</span>
+                    <span class="profile-name">Вася Бухіс</span>
                     <span class="profile-email font-weight-light">lorem@loremipsum.com</span>
                 </div>
             </div>
             <!--Profile Information Container End-->
 
+			<form class="width-100">
             <!--Profile Information Fields Container Start-->
             <div class="sign-up-form-container text-center">
-                <form class="width-100">
+                
 
                     <!--Profile Field Container Start-->
                     <div class="form-group">
@@ -70,13 +71,14 @@
                                     <img src="icons/avatar-light.svg" alt="Avatar Icon">
                                 </span>
                             </div>
-                            <input class="form-control" type="text" autocomplete="off" name="full-name" placeholder="Full Name">
+                            <input class="form-control" type="text" autocomplete="off" name="full-name" placeholder="ПІБ">
                         </div>
                     </div>
                     <!--Profile Field Container End-->
 
                     <!--Profile Field Container Start-->
-                    <div class="form-group">
+                    <!--
+					<div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span>
@@ -86,6 +88,7 @@
                             <input class="form-control" type="text" autocomplete="off" name="id-number" placeholder="Personal Id Number">
                         </div>
                     </div>
+					->>
                     <!--Profile Field Container End-->
 
                     <!--Profile Field Container Start-->
@@ -96,7 +99,7 @@
                                     <img src="icons/calendar.svg" alt="Calendar Icon" class="profile-calendar-icon">
                                 </span>
                             </div>
-                            <input class="form-control" type="text" autocomplete="off" name="dob" placeholder="Date of Birth">
+                            <input class="form-control" type="text" autocomplete="off" name="dob" placeholder="дата народження">
                         </div>
                     </div>
                     <!--Profile Field Container End-->
@@ -109,7 +112,7 @@
                                     <img src="icons/phone.svg" alt="Phone Number">
                                 </span>
                             </div>
-                            <input class="form-control" type="tel" name="phone" placeholder="Mobile Phone Number">
+                            <input class="form-control" type="tel" name="phone" placeholder="номер телефону">
                         </div>
                     </div>
                     <!--Profile Field Container End-->
@@ -122,13 +125,14 @@
                                     <img src="icons/envelope.svg" alt="Envelope Icon">
                                 </span>
                             </div>
-                            <input class="form-control" type="email" name="email" placeholder="Email">
+                            <input class="form-control" type="email" name="email" placeholder="email">
                         </div>
                     </div>
                     <!--Profile Field Container End-->
 
                     <!--Profile Field Container Start-->
-                    <div class="form-group">
+                    <!--
+					<div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span>
@@ -138,9 +142,11 @@
                             <input class="form-control" type="text" autocomplete="off" name="country" placeholder="Country">
                         </div>
                     </div>
+					-->
                     <!--Profile Field Container End-->
 
                     <!--Profile Field Container Start-->
+					<!--
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -156,9 +162,11 @@
                             </div>
                         </div>
                     </div>
+					-->
                     <!--Profile Field Container End-->
 
                     <!--Profile Field Container Start-->
+					<!--
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -174,15 +182,146 @@
                             </div>
                         </div>
                     </div>
+					-->
                     <!--Profile Field Container End-->
 
-                    <div class="form-submit-button">
-                        <a href="index.html" class="btn btn-dark text-uppercase ">Save <span class="far fa-save margin-left-10"></span></a>
-                    </div>
-                </form>
+
             </div>
             <!--Profile Information Fields Container End-->
 
+			<div class="scan-your-card-container-none">
+                <div class="clearfix"></div>
+
+                <div class="font-awesome-container"></div>
+
+                <!--Car Registration Info Container Start-->
+                <div class="car-info-container car-info-container-top font-weight-light">
+                    <div class="card-number">
+
+                        <!--Car Registration Field Start-->
+                        <div class="form-group">
+                            <label class="width-100">
+                                <span class="label-title">Автомобіль</span>
+                                <span class="car-info-wrap display-block">
+                                    <select class="custom-select font-weight-light car-info">
+                                        <option value="opel">Opel</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="toyota">Toyota</option>
+                                        <option value="nissan">Nissan</option>
+                                        <option value="bmw">BMW</option>
+                                    </select>
+                                </span>
+                            </label>
+                        </div>
+                        <!--Car Registration Field End-->
+
+                        <!--Car Registration Field Start-->
+                        <div class="form-group">
+                            <label class="width-100">
+                                <span class="label-title">Модель</span>
+                                <span class="car-info-wrap display-block">
+                                    <select class="custom-select font-weight-light car-info">
+                                        <option value="vectra">Vectra</option>
+                                        <option value="glc">GLC</option>
+                                        <option value="camri">Camri</option>
+                                        <option value="altima">Altima</option>
+                                        <option value="m3">M3</option>
+                                    </select>
+                                </span>
+                            </label>
+                        </div>
+                        <!--Car Registration Field End-->
+
+                        
+
+                        <!--Car Registration Two Fields Container Start-->
+                        <div class="multi-form-container display-flex justify-content-between">
+							<!--Car Registration Field Start-->
+							<div class="form-group">
+								<label class="width-100">
+									<span class="label-title">Колір</span>
+									<span class="car-info-wrap display-block">
+										<select class="custom-select font-weight-light car-info">
+											<option value="black">Black</option>
+											<option value="white">White</option>
+											<option value="grey">Grey</option>
+											<option value="silver">Silver</option>
+											<option value="blue">Blue</option>
+											<option value="red">Red</option>
+										</select>
+									</span>
+								</label>
+							</div>
+							<!--Car Registration Field End-->
+							<div class="form-group">
+                                <label class="width-100">
+                                    <span class="label-title">Реєстраційний знак</span>
+                                        <input class="form-control text-input font-weight-light" type="text" autocomplete="off" name="car-registration-num" value="LG-287-GL">
+                                </label>
+                            </div>
+							<!--
+                            <div class="form-group">
+                                <label class="width-100">
+                                    <span class="label-title">Fuel Petrol</span>
+                                    <span class="car-info-wrap display-block">
+                                        <select class="custom-select font-weight-light car-info">
+                                            <option value="petrol">Petrol</option>
+                                            <option value="diesel">Diesel</option>
+                                            <option value="gas">Gas</option>
+                                        </select>
+                                    </span>
+                                </label>
+                            </div>
+							-->
+                        </div>
+                        <!--Car Registration Two Fields Container End-->
+
+                        <!--Car Registration Two Fields Container Start-->
+						<!--
+                        <div class="multi-form-container display-flex justify-content-between">
+                            <div class="form-group">
+                                <label class="width-100 mb-0">
+                                    <span class="label-title">Date of Manufacture</span>
+                                </label>
+                                <div class="input-group light-field">
+                                    <div class="input-group-prepend">
+                                        <span class="far fa-calendar-alt"></span>
+                                    </div>
+                                    <input class="form-control" type="text" name="date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="width-100 mb-0">
+                                    <span class="label-title">Date of Registration</span>
+                                </label>
+                                <div class="input-group light-field">
+                                    <div class="input-group-prepend">
+                                        <span class="far fa-calendar-alt"></span>
+                                    </div>
+                                    <input class="form-control" type="text" name="date">
+                                </div>
+                            </div>
+                        </div>
+						-->
+                        <!--Car Registration Two Fields Container End-->
+
+					
+					</br>
+					
+					<div class="form-submit-button">
+                        <a href="index.html" class="btn btn-dark text-uppercase ">Зберегти <span class="far fa-save margin-left-10"></span></a>
+                    </div>
+                        
+
+                    </div>
+                </div>
+                <!--Car Registration Info Container End-->
+
+            </div>
+			
+			
+			</form>
+			
         </div>
     </div>
 
@@ -198,7 +337,7 @@
     </div>
     <!--Terms And Conditions Agreement Container End-->
 
-    <!--Main Menu Start-->
+	<!--Main Menu Start-->
     <div class="main-menu hidden-soft">
         <div class="mini-profile-info">
             <div class="menu-close">
@@ -207,11 +346,11 @@
                 </span>
             </div>
             <div class="profile-picture text-center">
-                <img src="images/profile-3.png" alt="Profile Picture">
+                <img src="images/profile-1.png" alt="Profile Picture">
             </div>
             <div class="profile-info">
-                <div class="profile-name text-center">Jonathan McBerly</div>
-                <div class="profile-email text-center">lorem@loremipsum.com</div>
+                <div class="profile-name text-center">Nata Vacheishvili</div>
+                <div class="profile-email text-center">nata_vacheishvili@gurucar.com</div>
             </div>
         </div>
         <div class="menu-items">
@@ -251,18 +390,18 @@
                     <span class="menu-item-title">My Wallet</span>
                     <span class="menu-item-click fas fa-arrow-right"></span>
                 </a>
-				
-                <a class="menu-item" href="driver-registration.html">
+				-->
+                <a class="menu-item" href="my-trips.html">
                     <span class="menu-item-icon menu-dark">
                             <img src="icons/driver-registration-dark.svg" alt="Driver Registration Icon">
                     </span>
                     <span class="menu-item-icon menu-light">
                             <img src="icons/driver-registration.svg" alt="Driver Registration Icon">
                     </span>
-                    <span class="menu-item-title">Driver Registration</span>
+                    <span class="menu-item-title">Мої поїздки</span>
                     <span class="menu-item-click fas fa-check green-status"></span>
                 </a>
-				-->
+				
                 <a class="menu-item position-relative" href="new-request.html">
                      <span class="menu-item-icon menu-dark">
                             <img src="icons/notification.svg" alt="Notification Icon">
@@ -290,17 +429,17 @@
                     <span class="menu-item-title">Online Support</span>
                     <span class="menu-item-click fas fa-arrow-right"></span>
                 </a>
-                <a href="loading-logo.html" class="menu-item margin-top-auto">
+				-->
+                <a href="index.html" class="menu-item margin-top-auto">
                     <span class="menu-item-icon menu-dark logout">
                         <img src="icons/logout.svg" alt="Logout Icon">
                     </span>
                     <span class="menu-item-icon menu-light logout">
                         <img src="icons/logout-light.svg" alt="Logout Icon">
                     </span>
-                    <span class="menu-item-title logout">Log out</span>
+                    <span class="menu-item-title logout">Вихід</span>
                     <span class="menu-item-click fas fa-arrow-right"></span>
                 </a>
-				-->
             </div>
         </div>
     </div>

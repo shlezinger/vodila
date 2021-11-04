@@ -91,8 +91,8 @@ $(document).ready(function(){
     });
 
     $('.request-ride-btn').on('click', function(){
-        $(this).addClass('hidden');
-        $('.ride-options-bottom').removeClass('hidden');
+        //$(this).addClass('hidden');
+        //$('.ride-options-bottom').removeClass('hidden');
     });
 
     $('.send-wishes-container').on('click', function(){
@@ -124,7 +124,7 @@ $(document).ready(function(){
         var icons = {
             0: new google.maps.MarkerImage(
                 // URL
-                '../images/taxi-icon-180.png',
+                'images/taxi-icon-180.png',
                 // (width,height)
                 new google.maps.Size( 23, 23 ),
                 // The origin point (x,y)
@@ -134,7 +134,7 @@ $(document).ready(function(){
             ),
             1: new google.maps.MarkerImage(
                 // URL
-                '../images/taxi-icon.png',
+                'images/taxi-icon.png',
                 // (width,height)
                 new google.maps.Size( 23, 23 ),
                 // The origin point (x,y)
@@ -144,7 +144,7 @@ $(document).ready(function(){
             ),
             2: new google.maps.MarkerImage(
                 // URL
-                '../images/taxi-icon-180.png',
+                'images/taxi-icon-180.png',
                 // (width,height)
                 new google.maps.Size( 23, 23 ),
                 // The origin point (x,y)
@@ -154,7 +154,7 @@ $(document).ready(function(){
             ),
             3: new google.maps.MarkerImage(
                 // URL
-                '../images/taxi-icon-180.png',
+                'images/taxi-icon-180.png',
                 // (width,height)
                 new google.maps.Size( 23, 23 ),
                 // The origin point (x,y)
@@ -164,7 +164,7 @@ $(document).ready(function(){
             ),
             4: new google.maps.MarkerImage(
                 // URL
-                '../images/taxi-icon-270.png',
+                'images/taxi-icon-270.png',
                 // (width,height)
                 new google.maps.Size( 23, 23 ),
                 // The origin point (x,y)
@@ -174,7 +174,7 @@ $(document).ready(function(){
             ),
             5: new google.maps.MarkerImage(
                 // URL
-                '../images/taxi-icon-180.png',
+                'images/taxi-icon-180.png',
                 // (width,height)
                 new google.maps.Size( 23, 23 ),
                 // The origin point (x,y)
@@ -184,7 +184,7 @@ $(document).ready(function(){
             ),
             6: new google.maps.MarkerImage(
                 // URL
-                '../images/taxi-icon-90.png',
+                'images/taxi-icon-90.png',
                 // (width,height)
                 new google.maps.Size( 23, 23 ),
                 // The origin point (x,y)
@@ -226,7 +226,7 @@ $(document).ready(function(){
 
     $(document).on('click', '.tapped-car-info .slide-up', function(){
         $(this).removeClass('slide-up').addClass('slide-down');
-        $(this).find('img').attr('src','../icons/down-arrow.svg');
+        $(this).find('img').attr('src','icons/down-arrow.svg');
         $('.requested-car-info').css('border-bottom','1px solid #F1F3F8');
         $('.tapped-car-info').addClass('more').animate({
             top: '200px'
@@ -237,7 +237,7 @@ $(document).ready(function(){
 
     $(document).on('click', '.tapped-car-info .slide-down', function(){
         $(this).removeClass('slide-down').addClass('slide-up');
-        $(this).find('img').attr('src','../icons/up-arrow.svg');
+        $(this).find('img').attr('src','icons/up-arrow.svg');
         var wh = parseInt($(window).height());
         var v = wh-292;
         $('.tapped-car-info').removeClass('more').animate({
@@ -447,11 +447,11 @@ $(document).ready(function(){
     $(document).on('click','.request-ride-info .slide-up', function(){
         $('.addresses-container').toggleClass('hidden');
         if($(this).hasClass('double-up')){
-            $(this).find('img').attr('src', '../icons/downarrow.svg');
+            $(this).find('img').attr('src', 'icons/downarrow.svg');
             $(this).removeClass('double-up').addClass('double-down');
         }
         else{
-            $(this).find('img').attr('src', '../icons/uparrow.svg');
+            $(this).find('img').attr('src', 'icons/uparrow.svg');
             $(this).removeClass('double-down').addClass('double-up');
         }
         if($('.drop-off-btn-container').is(":visible")) {
@@ -581,7 +581,7 @@ function multipleRoute(directionsService, directionsDisplay){
     var icons = {
         end: new google.maps.MarkerImage(
             // URL
-            '../icons/end.svg',
+            'icons/end.svg',
             // (width,height)
             new google.maps.Size(58, 53),
             // The origin point (x,y)
@@ -592,7 +592,7 @@ function multipleRoute(directionsService, directionsDisplay){
         ),
         marker: new google.maps.MarkerImage(
             // URL
-            '../icons/red-marker.svg',
+            'icons/red-marker.svg',
             // (width,height)
             new google.maps.Size(28, 45),
             // The origin point (x,y)
@@ -803,7 +803,7 @@ function showMapRequestPin(){
     var icons = {
         request: new google.maps.MarkerImage(
             // URL
-            '../icons/car-start-position.svg',
+            'icons/car-start-position.svg',
             // (width,height)
             new google.maps.Size(36, 28),
             // The origin point (x,y)
@@ -815,8 +815,8 @@ function showMapRequestPin(){
     };
     makeMarker( {lat: 50.462934,lng: 30.518816}, icons.request, "Request Pin", false);
     setTimeout(function() {
-        if (!$("img[src='../icons/car-start-position.svg']").parent().hasClass('pulse')) {
-            $("img[src='../icons/car-start-position.svg']").parent().addClass('pulse').css('opacity',1);
+        if (!$("img[src='icons/car-start-position.svg']").parent().hasClass('pulse')) {
+            $("img[src='icons/car-start-position.svg']").parent().addClass('pulse').css('opacity',1);
         }
     },600);
 }
