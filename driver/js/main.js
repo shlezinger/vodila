@@ -880,7 +880,7 @@ AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(
         var place = autocomplete.getPlace();
 
         if (!place.place_id) {
-            $('.request-ride-btn').addClass('hidden');
+            //$('.request-ride-btn').addClass('hidden');
             return;
         }
         if (mode === 'ORIG') {
@@ -894,7 +894,7 @@ AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(
 
 AutocompleteDirectionsHandler.prototype.route = function() {
     if (!this.originPlaceId || !this.destinationPlaceId) {
-        $('.request-ride-btn').addClass('hidden');
+        //$('.request-ride-btn').addClass('hidden');
         return;
     }
     var me = this;
