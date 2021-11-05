@@ -117,6 +117,20 @@ $(document).ready(function(){
         $(this).addClass('hidden');
         $('.send-wish-btn').removeClass('hidden');
     });
+	
+	
+	
+	
+	$('.request-ride-btn').on('click', function(){
+        alert('I hate tomatoes.');
+    });
+	
+	
+	
+	
+	
+	
+	
 
     $('.confirm-ride-btn').on('click',function(){
         $('.tap-on-car').removeClass('hidden');
@@ -906,6 +920,17 @@ AutocompleteDirectionsHandler.prototype.route = function() {
             travelMode: this.travelMode
         },
         function(response, status) {
+
+		
+				//my logger
+						for (var k=0;k<response.routes[0].legs[0].steps.length; k++) {
+							console.log("start coord=" + response.routes[0].legs[0].steps[k].start_location);
+							console.log("distance=" + response.routes[0].legs[0].steps[k].distance);
+						}
+
+				
+		
+		
             if (status === 'OK') {
                 var icons = {
                     start: new google.maps.MarkerImage(
